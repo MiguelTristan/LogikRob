@@ -1,0 +1,30 @@
+{% extends "logikApp/base.html" %}
+{% block title %}
+Acerca de
+{% endblock %}
+
+{% block background %}{% load static %}{% static 'logikApp/img/about-bg.jpeg' %}{% endblock %}
+{% block header %}Conocenos{% endblock %}
+{% block header-info %}
+Motivo por el cual se desarrollo este proyecto
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<script>
+  var f = new Date();
+</script>
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">En que consiste</h5>
+      <p class="card-text text-justify">
+        LogikRob, consiste en la enseñanza de programación, la cual está dirigida a personas que se encuentren interesadas en los lenguajes de programación.
+        Es importante destacar que es una app autodidacta porque consiste en aprender por sí mismo, así como proporcionar un marco teórico y práctico en relación a temas de programación.
+      </p>
+      <p class="card-text"><small class="text-muted">Actualizado: <script>document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());</script></small></p>
+    </div>
+    <img class="card-img-bottom col-md-5 offset-md-3" src="{% static 'logikApp/img/favicon.png' %}" alt="Card image cap">
+  </div>
+  </div>
+  {% endblock %}

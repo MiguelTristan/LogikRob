@@ -1,0 +1,26 @@
+{% extends 'logikApp/base.html' %}
+{% block title %}
+Registrarse
+{% endblock %}
+{% block background %}{% load static %}{% static 'logikApp/img/login.jpg' %}{% endblock %}
+{% block header %}
+Registrate
+{% endblock %}
+{% block header-info %}
+Obtenen el curso gratis
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <style media="screen">
+    label{
+      display: none;
+    }
+  </style>
+  <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" name="" class="btn btn-primary btn-block">Confirmar</button>
+  </form>
+</div>
+{% endblock %}

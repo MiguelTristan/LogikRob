@@ -1,0 +1,164 @@
+{% extends "logikApp/base.html" %}
+{% block title %}
+Aprende+
+{% endblock %}
+{% block background %}{% load static %}{% static 'logikApp/img/lenguaje.gif' %}{% endblock %}
+{% block header %}
+Lenguajes Disponibles
+{% endblock %}
+{% block header-info %}
+Conviertete en un autodidacta y desarrolla tus habilidades
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="alert alert-info text-center" role="alert">
+    Python
+  </div>
+  <div class="bd-example bd-example-tabs">
+    <div class="row">
+      <div class="col-3">
+        <div aria-orientation="vertical" class="nav flex-column nav-pills small" id="v-pills-tab" role="tablist">
+          <a aria-controls="v-pills-objetivo" aria-selected="true" class="nav-link active obj" data-toggle="pill" href="#v-pills-objetivo" id="v-pills-objetivo-tab" role="tab">
+                      <i class="fas fa-chess-knight"></i>
+                        Objetivo
+                    </a>
+          <a aria-controls="v-pills-ingreso" aria-selected="false" class="nav-link obj" data-toggle="pill" href="#v-pills-ingreso" id="v-pills-ingreso-tab" role="tab">
+                      <i class="fas fa-hammer"></i>
+                        Herramientas a utilizar
+                    </a>
+          <a aria-controls="v-pills-egreso" aria-selected="false" class="nav-link obj" data-toggle="pill" href="#v-pills-egreso" id="v-pills-egreso-tab" role="tab">
+                      <i class="fas fa-terminal"></i>
+                        Instalador de Python 3
+                    </a>
+          <a aria-controls="v-pills-estudios" aria-selected="false" class="nav-link obj" data-toggle="pill" href="#v-pills-estudios" id="v-pills-estudios-tab" role="tab">
+                      <i class="fas fa-book"></i>
+                        Recurso (libro)
+                    </a>
+          <a aria-controls="v-pills-academico" aria-selected="false" class="nav-link obj" data-toggle="pill" href="#v-pills-academico" id="v-pills-academico-tab" role="tab">
+                      <i class="fas fa-cubes"></i>
+                        Curso guiado
+                    </a>
+          <a aria-controls="v-pills-lgac" aria-selected="false" class="nav-link obj" data-toggle="pill" href="#v-pills-lgac" id="v-pills-lgac-tab" role="tab">
+                      <i class="fas fa-cogs"></i>
+                        LAC
+                        <p><small class="text-muted">Líneas de Aplicación del Conocimiento</small></p>
+                    </a>
+          <a aria-controls="v-pills-alumno" aria-selected="false" class="nav-link obj" data-toggle="pill" href="#v-pills-alumno" id="v-pills-alumno-tab" role="tab">
+                      <i class="fas fa-graduation-cap"></i>
+                        Alumnos
+                    </a>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active text-justify text-muted small" id="v-pills-objetivo" role="tabpanel" aria-labelledby="v-pills-objetivo-tab">
+            Este curso esta pensado para ser cursado por una persona que no conoce nada de programaciónn y se emplea el lenguaje Python como primer lenguaje para acercarse a la programación de computadoras.
+
+            El objetivo fundamental de este tutorial es permitir que el estudiante pueda resolver problemas de distinta índole (matemáticos, administrativos, contables etc.) empleando como herramienta la computadora.
+
+            Hay que tener en cuenta que para llegar a ser un programador se debe recorrer un largo camino donde cada tema es fundamental para conceptos futuros. Es importante no dejar temas sin entender y relacionar.
+          </div>
+
+
+          <div class="tab-pane fade" id="v-pills-ingreso" role="tabpanel" aria-labelledby="v-pills-ingreso-tab">
+            <ul class="text-muted">
+              <li>Computadora</li>
+              <li>Editor de texto (Atom, Sublime o Visual Studio Code)</li>
+              <li>Instalador de Python 3</li>
+            </ul>
+
+            <div class="card-deck">
+              <div class="card col-md-3" style="width:">
+                <img class="card-img-top" src="{% static 'logikApp/img/down-atom.png' %}" alt=";)">
+                <div class="card-body">
+                  <h5 class="card-title">Atom</h5>
+                  <p class="card-text small">Repositorio oficial</p>
+                  <a href="https://atom.io/" target="_blank" class="btn btn-primary small">Descarga</a>
+                </div>
+              </div>
+              <div class="card col-md-3" style="width:">
+                <img class="card-img-top" src="{% static 'logikApp/img/down-sub.png' %}" alt=";)">
+                <div class="card-body">
+                  <h5 class="card-title">Sublime</h5>
+                  <p class="card-text small">Repositorio oficial</p>
+                  <a href="https://www.sublimetext.com/3" target="_blank" class="btn btn-primary small">Descarga</a>
+                </div>
+              </div>
+              <div class="card col-md-3" style="width:">
+                <img class="card-img-top" src="{% static 'logikApp/img/down-vs.png' %}" alt=";)">
+                <div class="card-body">
+                  <h5 class="card-title">visual Studio Code</h5>
+                  <p class="card-text small">Repositorio oficial</p>
+                  <a href="https://code.visualstudio.com/" target="_blank" class="btn btn-primary small">Descarga</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="tab-pane fade" id="v-pills-egreso" role="tabpanel" aria-labelledby="v-pills-egreso-tab">
+            <div class="card col-md-6 offset-2" style="width:">
+              <img class="card-img-top" src="{% static 'logikApp/img/down-py.png' %}" alt=";)">
+              <div class="card-body">
+                <h5 class="card-title">Python</h5>
+                <p class="card-text small">Repositorio oficial</p>
+                <a href="https://www.python.org/downloads/" target="_blank" class="btn btn-primary small">Descarga</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="tab-pane fade" id="v-pills-estudios" role="tabpanel" aria-labelledby="v-pills-estudios-tab">
+            <iframe id="blockrandom" name="iframe" src="http://docs.python.org.ar/tutorial/pdfs/TutorialPython3.pdf" scrolling="auto" class="wrapper" width="100%" height="500" frameborder="1">
+Esta opción no funcionará correctamente. Lamentablemente, su navegador no soporta URLs embebidas.</iframe>
+          </div>
+
+
+          <div class="tab-pane fade" id="v-pills-academico" role="tabpanel" aria-labelledby="v-pills-academico-tab">
+            <div class="offset-2 mt-4">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/mGH1uooFhGs?list=PLagErt3C7iltgifmiGFQFI1GhUAKQvvyb" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+
+          <div class="tab-pane fade" id="v-pills-lgac" role="tabpanel" aria-labelledby="v-pills-lgac-tab">
+            <p class="text-muted text-justify small">
+              Con Python es posible hacer muchas cosas, algunas de las cosas que se pueden hacer son:
+              <ul class="text-muted">
+                <li>Escribir software multiplataforma, ya sea con PyQT o TKInter</li>
+                <li>Desarrollar videojuegos usando Panda3D, PyGame o Cocos2D</li>
+                <li>Desarrollar aplicaciones web usando Django o Flask</li>
+                <li>Realizar tareas de ciencia de datos (Ej: Big Data) con Python (competencia directa de “R” que sobresale en este campo )</li>
+                <li>Implementar machine learning con Scikit-Learn</li>
+              </ul>
+            </p>
+            <a href="https://anandology.com/presentations/solving-puzzles-with-python/#slide34" class="btn btn-success offset-4" target="_blank"><i class="fas fa-hand-point-up"></i></a>
+          </div>
+
+
+          <div class="tab-pane fade" id="v-pills-alumno" role="tabpanel" aria-labelledby="v-pills-alumno-tab">
+            {% for perfil_itera in perfiles_p %}
+            <!-- Alumnos -->
+            <div class="row">
+              <div class="col-lg-2 col-md-2 offset-lg-1">
+                {% if perfil_itera.avatar %}
+                <img class="img-fluid mt-2" src="{{perfil_itera.avatar.url}}" width="80px" height="80px">
+                {% else %}
+                <img src="{% static 'registration/img/no-avatar.jpg' %}" class="mt-2" width="80px" height="80px">
+                {% endif %}
+              </div>
+                <div class="col-lg-7 col-md-8">
+                  <p class="text-muted text-justify small">{{perfil_itera.bio}}</p>
+                  <a href="#" class="text-justify small" style="color:#007BFF;">{{perfil_itera.link}}</a>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

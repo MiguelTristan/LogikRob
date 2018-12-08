@@ -1,0 +1,10 @@
+{% extends "logikApp/base.html" %}
+{% block title %}
+Inicio
+{% endblock %}
+
+{% block background %}{% load static %}{% static 'logikApp/img/home-bg.jpg' %}{% endblock %}
+{% block header %}Estancia II{% endblock %}
+{% block header-info %}
+Practica y desarrolla habilidades para programar: {% if user.is_authenticated %}{{user.username}}{% else %}Visitante{% endif %}
+{% endblock %}

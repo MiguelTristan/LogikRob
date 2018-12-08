@@ -1,0 +1,107 @@
+{% extends "logikApp/base.html" %}
+{% block title %}
+Portafolio
+{% endblock %}
+{% block background %}{% load static %}{% static 'logikApp/img/portfolio-bg.jpg' %}{% endblock %}
+{% block header %}Portafolio{% endblock %}
+{% block header-info %}
+lenguajes disponibles para que aprendas<br/><br/>Integrantes inscritos: {{contador}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <i class="fab fa-python fa-lg"></i> Python
+        </button>
+      </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body text-justify text-muted">
+          Este curso esta pensado para ser cursado por una persona que no conoce nada de programaciónn y se emplea el lenguaje Python como primer lenguaje para acercarse a la programación de computadoras.
+
+          El objetivo fundamental es permitir que el estudiante pueda resolver problemas de distinta índole (matemáticos, administrativos, contables etc.) empleando como herramienta la computadora.
+          Es importante no dejar temas sin entender y relacionar.
+
+          La programación a diferencia de otras materias que ha estudiado como podría ser la historia requiere un estudio metódico y ordenado, Python es un lenguaje potente siendo utilizado en ramas de la tecnologia como :
+          <br/><br/>
+          <ul>
+            <li>Big-Data</li>
+            <li>Inteligencia Artificial</li>
+            <li>Procesos automatizados</li>
+            <li>Framework web</li>
+          </ul>
+          <div class="offset-3">
+            <img class="wow bounceInDown" src="{% static 'logikApp/img/python.png' %}" width="470" height="250" alt="">
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <i class="fab fa-js-square fa-lg"></i> JavaScript (Proximamente)
+        </button>
+      </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body text-justify text-muted">
+            Javascript es un lenguaje de programación que surgió con el objetivo inicial de programar ciertos comportamientos sobre las páginas web, respondiendo a la interacción del usuario y la realización de automatismos sencillos.
+            <p>En ese
+              contexto
+              podríamos decir que nació como un "lenguaje de scripting" del lado del cliente, sin embargo, hoy Javascript es mucho más. Las necesidades de las aplicaciones web modernas y el HTML5 ha provocado que el uso de Javascript que encontramos
+              hoy
+              haya llegado a unos niveles de complejidad y prestaciones tan grandes como otros lenguajes de primer nivel.</p>
+            <p>Pero además, en los últimos años Javascript se está convirtiendo también en el lenguaje "integrador". Lo encontramos en muchos ámbitos, ya no solo en Internet y la Web, también es nativo en sistemas operativos para ordenadores y
+              dispositivos, del lado del servidor y del cliente. Aquella visión de Javascript "utilizado para crear pequeños programitas encargados de realizar acciones dentro del ámbito de una página web" se ha quedado muy pequeña.</p>
+            <div class="offset-2">
+              <img class="wow fadeInDownBig rounded" src="{% static 'logikApp/img/javascript.png' %}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <i class="fab fa-python fa-lg"></i> Python Web (Django), (Proximamente)
+        </button>
+      </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              Django <p class="text-justify text-muted">es un framework web diseñado para realizar aplicaciones de cualquier complejidad en unos tiempos muy razonables.
+
+                Está escrito en Python y tiene una comunidad muy amplia, que está en continuo crecimiento.
+
+                Cuando construyes un sitio web, siempre necesitas un conjunto de componentes similares: una manera de manejar la autenticación de usuarios (registrarse, iniciar sesión, cerrar sesión), un panel de administración para tu sitio web,
+                formularios, una forma de subir archivos, etc.</p>
+              <div class="col-md-4 offset-3">
+                <img class="wow zoomInDown rounded" src="{% static 'logikApp/img/django.jpeg' %}" width="100%" alt="">
+              </div>
+                Ventajas
+                <p>
+                  <ul class="text-justify text-muted">
+                    <li><strong>Es muy rápido</strong>: Si tenéis una startup, tenéis prisa por terminar vuestro proyecto o, simplemente, queréis reducir costes, con Django podéis construir una aplicación muy buena en poco tiempo.</li>
+                    <li><strong>Viene bien cargado</strong>: Cualquier cosa que necesitéis realizar, ya estará implementada, sólo hay que adaptarla a vuestras necesidades. Ya sea porque hay módulos de la comunidad, por cualquier paquete Python que
+                      encontréis o las propias aplicaciones que Django trae, que son muy útiles.</li>
+                    <li><strong>Es bastante seguro</strong>: Podemos estar tranquilos con Django, ya que implementa por defecto algunas medidas de seguridad, las más clásicas, para que no haya SQL Injection, no haya Cross site request forgery (CSRF)
+                      o
+                      no
+                      haya Clickjacking por JavaScript. Django se encarga de manejar todo esto de una manera realmente sencilla.</li>
+                    <li><strong>Es muy escalable</strong>: Podemos pasar desde muy poco a una aplicación enorme perfectamente, una aplicación que sea modular, que funcione rápido y sea estable.</li>
+                    <li><strong>Es increíblemente versátil</strong>: Es cierto que en un principio Django comienza siendo un Framework para almacenar noticias por sitios de prensa, blogs y este estilo de webs, pero con el tiempo ha ganado tanta
+                      popularidad que se puede usar para el propósito que queráis.</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endblock %}

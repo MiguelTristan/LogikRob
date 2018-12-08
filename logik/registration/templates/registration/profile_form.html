@@ -1,0 +1,65 @@
+{% extends "logikApp/base.html" %}
+{% block title %}
+Avatar
+{% endblock %}
+{% block background %}{% load static %}{% static "logikApp/img/profile-img.png" %}{% endblock %}
+{% block header %}
+Personalizar Avatar
+{% endblock %}
+
+{% block content %}
+
+<main role="main">
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-9 mx-auto mb-5">
+        <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+          <div class="row">
+            <!-- Previa del avatar -->
+            <div class="col-md-2">
+              {% if request.user.profile.avatar %}
+              <img src="{{request.user.profile.avatar.url}}" class="img-fluid">
+              <p class="mt-1">¿Borrar? <input type="checkbox" id="avatar-clear" name="avatar-clear" /></p>
+
+                {% else %}
+                <img src="{% static 'registration/img/no-avatar.jpg' %}" class="img-fluid">
+                <p class="mt-1">¿Borrar? <input type="checkbox" id="avatar-clear" name="avatar-clear" /></p>
+                  {% endif %}
+            </div>
+            <!-- Formulario -->
+            <div class="col-md-10">
+              <h3>Perfil</h3>
+              <input type="file" name="avatar" class="btn btn-light form-control-file mt-3" id="id_avatar">
+              {{ form.bio }}
+              {{ form.link }}
+              <input type="submit" class="btn btn-primary btn-block mt-3" style="background:#5b2c6f;" value="Actualizar">
+            </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+<!--
+<div class="container">
+  <style media="screen">
+    label{
+      display: none;
+    }
+  </style>
+  <form class="" action="" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    <div class="col-md-2">
+      {% if request.user.profile.avatar %}
+      <img src="{{request.user.profile.avatar.url}}" class="img-fluid">
+      <p class="mt-1">¿Borrar? <input type="checkbox" id="avatar-clear" name="avatar-clear" /></p>
+        {% endif %}
+    </div>
+    {{form.as_p}}
+    <button type="submit" class="btn btn-primary btn-block" style="background:#5b2c6f;" name="">Actualizar</button>
+  </form>
+</div> -->
+{% endblock %}
